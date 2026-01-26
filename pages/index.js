@@ -1,7 +1,7 @@
-import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
+import { v4 as uuidv4 } from "https://jspm.dev/uuid";
 
 import { initialTodos, validationConfig } from "../utils/constants.js"
-import Todo from "../components/FormValidator.js"
+import Todo from "../components/Todo.js"
 import FormValidator from "../components/FormValidator.js"
 
 const addTodoButton = document.querySelector(".button_action_add");
@@ -25,10 +25,7 @@ const generateTodo = (data) => {
   const todoElement = todo.getView();    
   return todoElement;  
 
-
-  // If a due date has been set, parsing this it with `new Date` will return a
-  // number. If so, we display a string version of the due date in the todo.
-  const dueDate = new Date(data.date);
+const dueDate = new Date(data.date);
   if (!isNaN(dueDate)) {
     todoDate.textContent = `Due: ${dueDate.toLocaleString("en-US", {
       year: "numeric",
@@ -74,3 +71,4 @@ initialTodos.forEach((item) => {
 
 const newTodoValidator = new FormValidator(validationConfig, addTodoForm);
 newTodoValidator.enableValidation();
+FormValidator.resetValidation();
