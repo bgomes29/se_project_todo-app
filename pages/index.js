@@ -23,9 +23,8 @@ const closeModal = (modal) => {
 const generateTodo = (data) => {
   const todo = new Todo(data, "#todo-template");
   const todoElement = todo.getView();    
-  return todoElement;  
-
-const dueDate = new Date(data.date);
+  
+  const dueDate = new Date(data.date);
   if (!isNaN(dueDate)) {
     todoDate.textContent = `Due: ${dueDate.toLocaleString("en-US", {
       year: "numeric",
@@ -37,7 +36,7 @@ const dueDate = new Date(data.date);
   todoDeleteBtn.addEventListener("click", () => {
     todoElement.remove();
   });
-
+  return todoElement; 
 };
 
 addTodoButton.addEventListener("click", () => {

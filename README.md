@@ -1,14 +1,14 @@
 # Simple Todo App
 
-Give a brief description of the project here. Feel free to give it a different name.
+Creating a simple Todo App with a checklist feature.
 
 ## Functionality
 
-Give a more detailed explanation of the project and its functionality.
+This simple to-do app is functional and can add/delete items from a list, and check them off to denote completion.
 
 ## Technology
 
-Give a description of the technologies and techniques used. Pictures, GIFs, or screenshots that detail the project features are recommended.
+Primarily used VS Code to code this project.
 
 ## Deployment
 
