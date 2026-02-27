@@ -1,10 +1,10 @@
 class FormValidator {
   constructor(settings, formEl) {
-    this._inputSelector = settings._inputSelector;
-    this._submitButtonSelector = settings._submitButtonSelector;
-    this._errorClass = settings._errorClass;
-    this._inputErrorClass = settings._inputErrorClass;
-    this._inactiveButtonClass = settings._inactiveButtonClass;
+    this._inputSelector = settings.inputSelector;
+    this._submitButtonSelector = settings.submitButtonSelector;
+    this._errorClass = settings.errorClass;
+    this._inputErrorClass = settings.inputErrorClass;
+    this._inactiveButtonClass = settings.inactiveButtonClass;
     this._formEl = formEl;
   }
 
@@ -17,7 +17,7 @@ class FormValidator {
         _settings,
       );
     } else {
-      hideInputError(_formEl, _inputElement, _settings);
+      hideInputError(_formEl, _inputElement, settings);
     }
   };
 
@@ -36,7 +36,7 @@ class FormValidator {
       _settings.submitButtonSelector,
     );
 
-    toggleButtonState(inputList, buttonElement, settings);
+    _toggleButtonState(settings);
 
     this._inputList.forEach((inputElement) => {
       inputElement.addEventListener("input", () => {
@@ -48,6 +48,7 @@ class FormValidator {
 
   enableValidation() {
     this._formEl.addEventListener("submit", (evt) => {
+       console.log("Form submitted!", evt);
       evt.preventDefault();
     });
     this._setEventListeners(this._formEl, settings);
