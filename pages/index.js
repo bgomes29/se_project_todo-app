@@ -32,6 +32,8 @@ addTodoCloseBtn.addEventListener("click", () => {
   closeModal(addTodoPopup);
 });
 
+const newTodoValidator = new FormValidator(validationConfig, addTodoForm);
+
 addTodoForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
   const name = evt.target.name.value;
@@ -49,10 +51,5 @@ addTodoForm.addEventListener("submit", (evt) => {
   newTodoValidator.resetValidation();
 });
 
-initialTodos.forEach((item) => {
-  renderTodo(item);
-});
-
-const newTodoValidator = new FormValidator(validationConfig, addTodoForm);
 newTodoValidator.enableValidation();
 newTodoValidator.resetValidation();
