@@ -26,6 +26,7 @@ const validationConfig = {
   errorClass: "popup__error_visible",
   inputErrorClass: "popup__input_type_error",
   inactiveButtonClass: "button_disabled",
+  todoCloseBtn: "popup__close",
 };
 
 export { initialTodos, validationConfig }

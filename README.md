@@ -1,6 +1,6 @@
 # Simple Todo App
 
-Creating a simple Todo App with a checklist feature.
+Creating a simple Todo App with a checklist feature to keep track of items.
 
 ## Functionality
 
