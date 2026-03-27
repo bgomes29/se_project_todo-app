@@ -12,6 +12,6 @@ Primarily used VS Code to code this project.
 
 ## Deployment
 
-This project is deployed on GitHub Pages:
+This project is deployed live on:
 
-https://github.com/bgomes29/se_project_todo-app/tree/main
+https://bgomes29.github.io/se_project_todo-app/
