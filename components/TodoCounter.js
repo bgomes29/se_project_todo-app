@@ -8,6 +8,7 @@ class TodoCounter {
 
   updateCompleted = (increment) => {
     this._completed += increment ? 1 : -1;
+    this._completed = Math.max(0, this._completed);
     this._updateText();
   };
 

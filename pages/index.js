@@ -50,6 +50,7 @@ const section = new Section({
 const renderTodo = (item) => {
   const todo = generateTodo(item);
   section.addItem(todo);
+  todoCounter.updateTotal(true);
 };
 
 section.renderItems();
@@ -62,7 +63,7 @@ function handleCheck(completed) {
   }
 }
 
-function handleDelete(completed) {
+function handleDelete(id, completed) {
   todoCounter.updateTotal(false);
     if (completed) {
       todoCounter.updateCompleted(false);
